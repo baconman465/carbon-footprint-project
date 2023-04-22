@@ -1,7 +1,74 @@
-/* index/nav */
+/* nav */
+
+/* classes with empty are used when close button is pressed */
+
+.navbar-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: green;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container-empty{
+    display: grid;
+    height: .1rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.navbar-item{
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-item-empty{
+    color: rgb(166, 225, 166); /*same as body color*/
+}
+
+.closeButton{
+    margin-left: .5rem;
+    width: 5rem;
+    font-size: 1.5rem;
+    background-color: rgb(64, 192, 64);
+    border-color: transparent;
+    transition: scale .5s;
+}
+
+.openButton{
+    margin-left: .5rem;
+    width: 5rem;
+    font-size: 1.5rem;
+    background-color: rgb(64, 192, 64);
+    border-color: transparent;
+    transition: scale .5s;
+}
+
+.closeButton:hover{
+    scale: 1.5;
+    transition: scale .5s;
+}
+
+.openButton:hover{
+    scale: 1.5;
+    transition: scale .5s;
+}
+
+@media screen and (max-width:1000px){
+    .navbar-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* index and some remnants of the old navbar */
 
 body{
-    background-color: rgb(204, 226, 204);
+    background-color: rgb(166, 225, 166);
 }
 
 .header{
@@ -43,6 +110,7 @@ h1{
 
 .index-body{
     font-size: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 .header_img{
@@ -53,44 +121,19 @@ h1{
     transform-origin: 50% 50%;
 }
 
-.header_img:hover{
-    /* animation: rotation 2s infinite cubic-bezier(0.4, 0, 0.2, 1); */
-    animation: rotation 2s infinite linear;
+.nobg-header{
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
+@media screen and (max-width:750px){
+    .index-video{
+        scale: .5;
     }
 }
-
-.invisible {
-    visibility: hidden;
-}
-
-.closeButton{
-    font-size: 1.5rem;
-    background-color: rgb(64, 192, 64);
-    border-color: transparent;
-}
-
-.openButton{
-    margin-left: 83.35rem;
-    margin-top: 1.6rem;
-    font-size: 1.5rem;
-    background-color: rgb(64, 192, 64);
-    border-color: transparent;
-}
-
 
 /* work cited */
 
-.cited-header{
-    font-size: 3rem;
-}
 
 .cited-container{
     display: grid;
@@ -154,11 +197,11 @@ a:active {
 }
 
 
-/* info */
+/* info pages */
 
 .info-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 5rem;
     row-gap: 5rem;
 }
@@ -175,8 +218,16 @@ a:active {
 
 .info-card-title{
     font-size: 2rem;
+    color: white;
 }
 
 .info-card-text{
+    font-size: 1.5rem;
+    color: white;
+}
 
+@media screen and (max-width:1000px){
+    .info-container{
+        grid-template-columns: 1fr;
+    }
 }
