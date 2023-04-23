@@ -1,7 +1,5 @@
 /* nav */
 
-/* classes with empty are used when close button is pressed */
-
 .navbar-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -104,6 +102,12 @@ body{
     text-align: center;
 }
 
+.center-image{
+    display: block;
+    padding-top: 3rem;
+    margin: 0 auto;
+}
+
 h1{
     padding-bottom: 1.5rem;
 }
@@ -168,11 +172,6 @@ h1{
     color: black;
 }
 
-.cited-iframe{
-    align-items: center;
-    justify-content: center;
-}
-
 a{
     scale: 1;
     transition: scale .5s;
@@ -202,6 +201,13 @@ a:active {
 .info-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 5rem;
+}
+
+.transportation-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5rem;
     row-gap: 5rem;
 }

@@ -20,12 +20,12 @@
 //new better navbar i inject so its uniform in all the pages
 
 let navbar = document.getElementById("navinject");
-let navcode = "<div class='navbar-container' id='navbar'> <a class='navbar-item' href='index.html'>Home</a> <a class='navbar-item' href='transportation.html'>Transportation</a> <a class='navbar-item' href='#'>Placeholder</a>  <a class='navbar-item' href='#'>Placeholder</a> <a class='navbar-item' href='work cited.html'>Work Cited</a> <button class='closeButton' onclick='removeNav()'>Close</button> </div>";
+let navcode = "<div class='navbar-container' id='navbar'> <a class='navbar-item' href='index.html'>Intro</a> <a class='navbar-item' href='transportation.html'>Transportation</a> <a class='navbar-item' href='food.html'>Food</a>  <a class='navbar-item' href='home.html'>Home</a> <a class='navbar-item' href='work cited.html'>Work Cited</a> <button class='closeButton' onclick='removeNav()'>Close</button> </div>";
 
 navbar.innerHTML = navcode;
 
 function removeNav(){
-    navbar.innerHTML = "<div class='navbar-container-empty' id='navbar'> <a class='navbar-item-empty' href='index.html'>Home</a> <a class='navbar-item-empty' href='transportation.html'>Transportation</a> <a class='navbar-item-empty' href='#'>Placeholder</a> <a class='navbar-item-empty' href='#'>Placeholder</a> <a class='navbar-item-empty' href='work cited.html'>Work Cited</a> <button class='openButton' onclick='addNav()'>Open</button> </div>";
+    navbar.innerHTML = "<div class='navbar-container-empty' id='navbar'> <a class='navbar-item-empty' href='index.html'>Intro</a> <a class='navbar-item-empty' href='transportation.html'>Transportation</a> <a class='navbar-item' href='food.html'>Food</a> <a class='navbar-item-empty' href='home.html'>Home</a> <a class='navbar-item-empty' href='work cited.html'>Work Cited</a> <button class='openButton' onclick='addNav()'>Open</button> </div>";
 }
 function addNav(){
     navbar.innerHTML = navcode;
